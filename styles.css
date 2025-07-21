@@ -3,6 +3,7 @@ body {
   background: #f7f7f7;
   margin: 0;
   color: #222;
+  padding-right: 32px;
 }
 
 body.cyberpunk-theme {
@@ -508,7 +509,7 @@ body.earth-theme .module-header {
   flex-wrap: wrap;
   gap: 24px;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 .resource-card {
@@ -522,8 +523,15 @@ body.earth-theme .module-header {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
   transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.resource-card h3,
+.resource-card p,
+.resource-card a {
+  text-align: left;
 }
 
 .resource-card:hover {
@@ -534,6 +542,17 @@ body.earth-theme .module-header {
 .resource-card img {
   border-radius: 8px;
   background: #f5f5f5;
+}
+
+/* Tech Stack module card width override */
+#moduleContent .use-case-card,
+#moduleContent .resource-card {
+  max-width: 800px !important;
+  width: 100% !important;
+}
+#moduleContent {
+  max-width: none !important;
+  width: 100% !important;
 }
 
 @media (max-width: 1100px) {
